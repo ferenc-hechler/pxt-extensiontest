@@ -27,7 +27,7 @@ namespace extensiontest {
 //% block="Init Brain|number %inputs|number[] %hidden|number %outputs"
 //% shim=extensiontest::initfcnn
 void initfcnn(int inputs, RefCollection &hidden, int outputs) {
-	uBit.serial.send("initfcnn");
+	uBit.serial.send("initfcnn-v2");
 }
 
 
@@ -35,7 +35,7 @@ void initfcnn(int inputs, RefCollection &hidden, int outputs) {
 //% block="Json Brain|string %json"
 //% shim=extensiontest::fcnnfromjson
 void fcnnfromjson(String json) {
-	uBit.serial.send("fcnnfromjson");
+	uBit.serial.send("fcnnfromjson-v2");
 }
 
 
@@ -45,14 +45,14 @@ void fcnnfromjson(String json) {
 //% block="Train with err result|number[] %input|number[] %expected_output"
 //% shim=extensiontest::ftrain
 float ftrain(RefCollection &input, RefCollection &expected_output) {
-	uBit.serial.send("ftrain");
+	uBit.serial.send("ftrain-v2");
 }
 
 //% blockId=extensiontest_train
 //% block="Train|number[] %input|number[] %expected_output"
 //% shim=extensiontest::train
 void train(RefCollection &input, RefCollection &expected_output) {
-	uBit.serial.send("train");
+	uBit.serial.send("train-v2");
 }
 
 
@@ -61,7 +61,7 @@ void train(RefCollection &input, RefCollection &expected_output) {
 //% block="Predict|number[] %input|number[] %output"
 //% shim=extensiontest::predict
 void predict(RefCollection &input, RefCollection &output) {
-	uBit.serial.send("predict");
+	uBit.serial.send("predict-v2");
 }
 
 
